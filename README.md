@@ -14,6 +14,18 @@ whether this method is more or less (or equally) likely to pick a good pivot
 compared to simply choosing the first element. Assume that all permutations are
 equally likely, i.e. the input array is ordered randomly.
 
+<ins>Initial Thoughts</ins>
+
+**Picking leftmost element**
+  1. We always pick the first element (could be anything). 
+  2. Problem? If the array is sorted or almost sorted, this isnt greated
+     
+**Picking 'Median-of-three' element**
+  1. We pick the median value of the first, mid, and last elements. In worst case scenarios (sorted list) this is an improvment from picking the leftmost runtime
+  2. Problem? Comparing the first, mid, and last runs at constant time, this is not really a problem
+
+Hypothesis : The goal for choosing a pivot, is to have the resulting partition divide the list into roughly equal halfs. Choosing a median value between the first, mid, and last element should, on average, have a better chance at dividing the list into rougly equal halfs, than always picking the first element. Deciding between three values in comparison to always picking one value should give us a better chance at placing the pivot near the middle of the list. 
+
 Your answer must derive probabilities for choosing a good pivot and
 quantitatively reason with them.
 
