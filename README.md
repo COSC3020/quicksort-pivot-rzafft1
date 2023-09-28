@@ -30,7 +30,7 @@ Your answer must derive probabilities for choosing a good pivot and
 quantitatively reason with them.
 
 - when we pick the leftmost element, we only have one option, we should expect to get a good pivot every $2$ tries, so the probability that we are choosing the a pivot that will end up near the middle of the list is 0.5 or 50%
-- if we pick the median-of-three element, we have three options, so we should expect that we get a good pivot every 3/2 tries, meaning that <u>**the probability that we get a good pivot every 3/2 tries is 66.67%**</u>
+- if we pick the median-of-three element, we have three options, so we should expect that we get a good pivot every 2/3 tries, meaning that <u>**the probability that we get a good pivot every 2/3 tries is 66.67%**</u>
 
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
