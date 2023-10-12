@@ -45,7 +45,8 @@ quantitatively reason with them.
 - (_,PP,P)   // GOOD : 2/7 we get good pivot
 - (_,P,PP)   // GOOD : 1/7 we get good pivot
 
-add up all the probabilities to get a total of 7 
+add up all the probabilities to get a total of 11
+we have 7 possible cases
 ```
 
 - Probability for choosing a 'good' pivot is ($100 \cdot \frac{7}{11}$) $63.6$ %.
