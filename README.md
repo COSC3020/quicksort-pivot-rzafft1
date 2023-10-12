@@ -29,8 +29,27 @@ Hypothesis : The goal for choosing a pivot, is to have the resulting partition d
 Your answer must derive probabilities for choosing a good pivot and
 quantitatively reason with them.
 
-- when we pick the leftmost element, we only have one option, we should expect to get a good pivot every $2$ tries, so the probability that we are choosing the a pivot that will end up near the middle of the list is 0.5 or 50%
-- if we pick the median-of-three element, we have three options, so we should expect that we get a good pivot every 2/3 tries, meaning that <u>**the probability that we get a good pivot every 2/3 tries is 66.67%**</u>
+- lets say we divide our array into three parts (BAD PIVOT AREA , GOOD PIVOT AREA, BAD PIVOT AREA) and lets write out every possible tripple pivot combination. We will express each pivot option with a 'P'.
+- if a pivot combination has a pivot in the 'GOOD PIVOT AREA' we can declare that it is a 'good' pivot, otherwise, there is not a 'good' pivot in the combination
+```
+- (P,P,P)    // GOOD 
+- (PPP,_,_)  // BAD
+- (_,PPP,_)  // GOOD 
+- (_,_,PPP)  // BAD
+- (PP,P,_)   // GOOD
+- (PP,_,P)   // BAD
+- (P,PP,_)   // GOOD
+- (P,_,PP)   // GOOD
+- (P,P,P)    // GOOD
+- (_,PP,P)   // GOOD
+- (_,P,PP)   // GOOD
+```
+- GOOD pivots : 8
+- Total  pivots : 11
+
+- Probability for choosing a 'good' pivot is ($100 \cdot \frac{8}{11}$) $72.3$ %.
+- Therefore, my hypothesis was correct, the median of three pivot will have a better probability of selecting a pivot near the middle of the list, that the left most pivot selection
+ 
 
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
