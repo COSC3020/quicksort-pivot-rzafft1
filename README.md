@@ -37,16 +37,35 @@ quantitatively reason with them.
 - (_,_,PPP)  // BAD  : 
 - (PP,_,P)   // BAD  :   
 - (P,_,PP)   // BAD  :
-- (P,P,P)    // GOOD : 1/7 we get good pivot
-- (_,PPP,_)  // GOOD : 3/7 we get good pivot
-- (PP,P,_)   // GOOD : 1/7 we get good pivot
-- (P,PP,_)   // GOOD : 2/7 we get good pivot
-- (P,P,P)    // GOOD : 1/7 we get good pivot
-- (_,PP,P)   // GOOD : 2/7 we get good pivot
-- (_,P,PP)   // GOOD : 1/7 we get good pivot
+- (P,P,P)    // GOOD : 1/11 we get good pivot
+- (_,PPP,_)  // GOOD : 3/11 we get good pivot
+- (PP,P,_)   // GOOD : 1/11 we get good pivot
+- (P,PP,_)   // GOOD : 2/11 we get good pivot
+- (P,P,P)    // GOOD : 1/11 we get good pivot
+- (_,PP,P)   // GOOD : 2/11 we get good pivot
+- (_,P,PP)   // GOOD : 1/11 we get good pivot
 
-add up all the probabilities to get a total of 11
-we have 7 possible cases
+the probabilites we want to look at are ...
+
+- (P,P,P)    // GOOD : 1/11 we get good pivot
+- (_,PPP,_)  // GOOD : 3/11 we get good pivot
+- (PP,P,_)   // GOOD : 1/11 we get good pivot
+- (P,PP,_)   // GOOD : 2/11 we get good pivot
+- (P,P,P)    // GOOD : 1/11 we get good pivot
+- (_,PP,P)   // GOOD : 2/11 we get good pivot
+- (_,P,PP)   // GOOD : 1/11 we get good pivot
+
+sum of thede cases are the same 
+
+- (P,P,P)    // GOOD : 1/11 we get good pivot
+- (_,PPP,_)  // GOOD : 3/11 we get good pivot
+- (PP,P,_) or (_,P,PP) // GOOD : 1/11 we get good pivot
+- (P,PP,_)   // GOOD : 2/11 we get good pivot
+
+
+
+
+add up all the probabilities to get to of 7
 ```
 
 - Probability for choosing a 'good' pivot is ($100 \cdot \frac{7}{11}$) $63.6$ %.
