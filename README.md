@@ -37,38 +37,36 @@ quantitatively reason with them.
 - (_,_,PPP)  // BAD  : 
 - (PP,_,P)   // BAD  :   
 - (P,_,PP)   // BAD  :
-- (P,P,P)    // GOOD : 1/11 we get good pivot
-- (_,PPP,_)  // GOOD : 3/11 we get good pivot
-- (PP,P,_)   // GOOD : 1/11 we get good pivot
-- (P,PP,_)   // GOOD : 2/11 we get good pivot
-- (P,P,P)    // GOOD : 1/11 we get good pivot
-- (_,PP,P)   // GOOD : 2/11 we get good pivot
-- (_,P,PP)   // GOOD : 1/11 we get good pivot
+- (P,P,P)    // GOOD : 1/10 we get good pivot
+- (_,PPP,_)  // GOOD : 3/10 we get good pivot
+- (PP,P,_)   // GOOD : 1/10 we get good pivot
+- (P,PP,_)   // GOOD : 2/10 we get good pivot
+- (_,PP,P)   // GOOD : 2/10 we get good pivot
+- (_,P,PP)   // GOOD : 1/10 we get good pivot
 
 the probabilites we want to look at are ...
 
-- (P,P,P)    // GOOD : 1/11 we get good pivot
-- (_,PPP,_)  // GOOD : 3/11 we get good pivot
-- (PP,P,_)   // GOOD : 1/11 we get good pivot
-- (P,PP,_)   // GOOD : 2/11 we get good pivot
-- (P,P,P)    // GOOD : 1/11 we get good pivot
-- (_,PP,P)   // GOOD : 2/11 we get good pivot
-- (_,P,PP)   // GOOD : 1/11 we get good pivot
+- (P,P,P)    // GOOD : 1/10 we get good pivot
+- (_,PPP,_)  // GOOD : 3/10 we get good pivot
+- (PP,P,_)   // GOOD : 1/10 we get good pivot
+- (P,PP,_)   // GOOD : 2/10 we get good pivot
+- (_,PP,P)   // GOOD : 2/10 we get good pivot
+- (_,P,PP)   // GOOD : 1/10 we get good pivot
 
-sum of thede cases are the same 
+sum of thede cases are the same so we can reduce these cases to ... 
 
-- (P,P,P)    // GOOD : 1/11 we get good pivot
-- (_,PPP,_)  // GOOD : 3/11 we get good pivot
-- (PP,P,_) or (_,P,PP) // GOOD : 1/11 we get good pivot
-- (P,PP,_)   // GOOD : 2/11 we get good pivot
-
+- (P,P,P)    // GOOD : 1/10 we get good pivot
+- (_,PPP,_)  // GOOD : 3/10 we get good pivot
+- (PP,P,_) or (_,P,PP) // GOOD : 1/10 we get good pivot
+- (P,PP,_)   // GOOD : 2/10 we get good pivot
 
 
 
-add up all the probabilities to get to of 7
+
+add up all the probabilities to get to of 7/10
 ```
 
-- Probability for choosing a 'good' pivot is ($100 \cdot \frac{7}{11}$) $63.6$ %.
+- Probability for choosing a 'good' pivot is ($100 \cdot \frac{7}{10}$) $70$ %.
 - Therefore, my hypothesis was correct, the median of three pivot will have a better probability of selecting a pivot near the middle of the list, that the left most pivot selection
  
 
