@@ -31,42 +31,39 @@ quantitatively reason with them.
 
 - lets say we divide our array into three parts (BAD PIVOT AREA , GOOD PIVOT AREA, BAD PIVOT AREA) and lets write out every possible tripple pivot combination. We will express each pivot option with a 'P'.
 - if a pivot combination has a pivot in the 'GOOD PIVOT AREA' we can declare that it is a 'good' pivot, otherwise, there is not a 'good' pivot in the combination
-- But the probability for each one of these cases isn't the same. The good part is twice as large as the bad parts, so the probability of choosing something in that part is larger
+
 ```
-- (PPP,_,_)  // BAD  :
-- (_,_,PPP)  // BAD  : 
-- (PP,_,P)   // BAD  :   
-- (P,_,PP)   // BAD  :
-- (P,P,P)    // GOOD : 1/10 we get good pivot
-- (_,PPP,_)  // GOOD : 3/10 we get good pivot
-- (PP,P,_)   // GOOD : 1/10 we get good pivot
-- (P,PP,_)   // GOOD : 2/10 we get good pivot
-- (_,PP,P)   // GOOD : 2/10 we get good pivot
-- (_,P,PP)   // GOOD : 1/10 we get good pivot
+- (PPP,_,_)  // BAD   
+- (_,_,PPP)  // BAD   
+- (PP,_,P)   // BAD     
+- (P,_,PP)   // BAD  
+- (P,P,P)    // GOOD  
+- (_,PPP,_)  // GOOD  
+- (PP,P,_)   // GOOD  
+- (P,PP,_)   // GOOD  
+- (_,PP,P)   // GOOD  
+- (_,P,PP)   // GOOD  
 
 the probabilites we want to look at are ...
 
-- (P,P,P)    // GOOD : 1/10 we get good pivot
-- (_,PPP,_)  // GOOD : 3/10 we get good pivot
-- (PP,P,_)   // GOOD : 1/10 we get good pivot
-- (P,PP,_)   // GOOD : 2/10 we get good pivot
-- (_,PP,P)   // GOOD : 2/10 we get good pivot
-- (_,P,PP)   // GOOD : 1/10 we get good pivot
+- (P,P,P)    // GOOD : 1/4 * 1/2 * 1/4 = 2/64 * 6 = 3/16
+- (_,PPP,_)  // GOOD : 1/2 * 1/2 * 1/2 = 8/64 * 1 = 2/16
+- (PP,P,_)   // GOOD : 1/4 * 1/4 * 1/2 = 2/64 * 6 = 3/16
+- (P,PP,_)   // GOOD : 1/4 * 1/2 * 1/2 = 4/64 * 3 = 3/16
+- (_,PP,P)   // GOOD : 1/2 * 1/2 * 1/4 = 4/64 * 3 = 3/16
+- (_,P,PP)   // GOOD : 1/2 * 1/4 * 1/4 = 2/64 * 6 = 3/16
 
-sum of thede cases are the same so we can reduce these cases to ... 
+some of these cases are the same so we can reduce these cases to ...
 
-- (P,P,P)    // GOOD : 1/10 we get good pivot
-- (_,PPP,_)  // GOOD : 3/10 we get good pivot
-- (PP,P,_) or (_,P,PP) // GOOD : 1/10 we get good pivot
-- (P,PP,_)   // GOOD : 2/10 we get good pivot
+- (P,P,P)              // GOOD : 1/4 * 1/2 * 1/4 = 2/64 * 6 = 3/16
+- (_,PPP,_)            // GOOD : 1/2 * 1/2 * 1/2 = 8/64 * 1 = 2/16
+- (PP,P,_) or (_,P,PP) // GOOD : 1/4 * 1/4 * 1/2 = 2/64 * 6 = 3/16
+- (P,PP,_) or (_,PP,P) // GOOD : 1/4 * 1/2 * 1/2 = 4/64 * 3 = 3/16
 
-
-
-
-add up all the probabilities to get to of 7/10
+add up all the probabilities (3/16 + 2/16 + 3/16 + 3/16) to get total of 11/16
 ```
 
-- Probability for choosing a 'good' pivot is ($100 \cdot \frac{7}{10}$) $70$ %.
+- Probability for choosing a 'good' pivot is ($100 \cdot \frac{11}{16}$) $68.75$ %.
 - Therefore, my hypothesis was correct, the median of three pivot will have a better probability of selecting a pivot near the middle of the list, that the left most pivot selection
  
 
